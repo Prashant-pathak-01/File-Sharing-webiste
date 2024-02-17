@@ -42,11 +42,10 @@ function Body() {
           </div>
         </SignedOut>
         <SignedIn>
-          <a 
-            class="block w-full rounded border border-primaryColorA bg-primaryColorA px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primaryColorA focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-            href="/dashboard/sharefile">
+          <Link to='/dashboard/sharefile'><a 
+            class="block w-full rounded border border-primaryColorA bg-primaryColorA px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primaryColorA focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
             Start Sharing <ArrowForwardIosIcon></ArrowForwardIosIcon>
-          </a>
+          </a></Link>
         </SignedIn>
 
         <Link to='/aboutUs'><a
