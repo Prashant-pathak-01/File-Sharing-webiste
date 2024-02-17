@@ -46,8 +46,8 @@ function Page({ setView, fileId,setFileId }) {
   }
 
   const SendMail=async()=>{
-    let res = await sendMail({Sender:file?.UserName,Reciever:mail,Password:file?.Password,Link:url});
-    console.log(res);
+    alert("This is a paid service, so it's not working currently !")
+    //  let res = await sendMail({Sender:file?.UserName,Reciever:mail,Password:file?.Password,Link:url});
   }
 
   return (

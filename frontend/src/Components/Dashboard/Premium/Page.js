@@ -5,7 +5,7 @@ import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 function page() {
   const payment=()=>{
-    alert("🚧 Payment system is Website Under Construction 🚧");
+    alert("🚧 Payment system is Under Construction 🚧");
   }
   return (
     <div className='w-full h-screen flex flex-col  items-center bg-colorB'>
@@ -32,7 +32,7 @@ function page() {
           <p className='m-2 flex flex-row items-top'><TaskAltOutlinedIcon className='text-green-600 m-2'></TaskAltOutlinedIcon><span  className='mt-1 font-medium '> Lifetime premium access </span></p>
 
         </div>
-        <button className='bg-primaryColorA text-white w-1/2 h-12 rounded-md hover:bg-white hover:border-2 hover:border-primaryColorA hover:scale-90 hover:text-primaryColorA font-medium font-oswald transtiron duration-200'>Buy Premium</button>
+        <button className='bg-primaryColorA text-white w-1/2 h-12 rounded-md hover:bg-white hover:border-2 hover:border-primaryColorA hover:scale-90 hover:text-primaryColorA font-medium font-oswald transtiron duration-200' onClick={payment}>Buy Premium</button>
         </div>
       </div>
     </div>
