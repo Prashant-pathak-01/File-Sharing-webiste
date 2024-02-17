@@ -3,7 +3,6 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import React, { useEffect } from 'react';
 import Authentication from './Authentication';
 import {addUser} from '../../../API/api';
-import { Link } from 'react-router-dom';
 function Body() {
   const {user} = useUser();
   useEffect(()=>{
@@ -42,16 +41,19 @@ function Body() {
           </div>
         </SignedOut>
         <SignedIn>
-          <Link to='/dashboard/sharefile'><a 
-            class="block w-full rounded border border-primaryColorA bg-primaryColorA px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primaryColorA focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
+          <a 
+            class="block w-full rounded border border-primaryColorA bg-primaryColorA px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primaryColorA focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+            href="/dashboard/sharefile">
             Start Sharing <ArrowForwardIosIcon></ArrowForwardIosIcon>
-          </a></Link>
+          </a>
         </SignedIn>
 
-        <Link to='/aboutUs'><a
-          class="block w-full rounded border border-primaryColorA px-12 py-3 text-sm font-medium text-primaryColorA hover:bg-primaryColorA hover:text-white focus:outline-none focus:ring active:bg-primaryColorA sm:w-auto">
+        <a
+          class="block w-full rounded border border-primaryColorA px-12 py-3 text-sm font-medium text-primaryColorA hover:bg-primaryColorA hover:text-white focus:outline-none focus:ring active:bg-primaryColorA sm:w-auto"
+          href="/about"
+        >
           Learn More
-        </a></Link>
+        </a>
       </div>
     </div>
   </div>

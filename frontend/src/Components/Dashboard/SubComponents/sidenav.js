@@ -7,7 +7,6 @@ import { useUser } from '@clerk/clerk-react';
 import MoneyOffOutlinedIcon from '@mui/icons-material/MoneyOffOutlined';
 import DiamondOutlinedIcon from '@mui/icons-material/DiamondOutlined';
 import AllInclusiveOutlinedIcon from '@mui/icons-material/AllInclusiveOutlined';
-import { Link } from 'react-router-dom';
 function Sidenav({view}) {
   const {user} = useUser();
   const[userData,setUserData] = useState();
@@ -23,17 +22,17 @@ function Sidenav({view}) {
   <div class="px-4 py-6">
     <ul class="mt-6 space-y-4">
       <li>
-        <Link to='/dashboard/sharefile'></Link><a class="block rounded-lg bg-colorA px-4 py-3 text-sm font-medium text-primaryColorA transition duration-300 hover:bg-primaryColorA hover:text-colorB ">
+        <a href="/dashboard/sharefile" class="block rounded-lg bg-colorA px-4 py-3 text-sm font-medium text-primaryColorA transition duration-300 hover:bg-primaryColorA hover:text-colorB ">
           <FileUploadRoundedIcon className='mr-3'></FileUploadRoundedIcon>Share Data
         </a>
       </li>
       <li>
-        <Link to='/dashboard/history'></Link><a class="block rounded-lg bg-colorA px-4 py-3 text-sm font-medium text-primaryColorA transition duration-300 hover:bg-primaryColorA hover:text-colorB">
+        <a href="/dashboard/history" class="block rounded-lg bg-colorA px-4 py-3 text-sm font-medium text-primaryColorA transition duration-300 hover:bg-primaryColorA hover:text-colorB">
           <HistoryRoundedIcon className='mr-3'></HistoryRoundedIcon>History
         </a>
       </li>
       <li>
-        <Link to='dashboard/premium'></Link><a class="block rounded-lg bg-colorA px-4 py-3 text-sm font-medium text-primaryColorA transition duration-300 hover:bg-primaryColorA hover:text-colorB">
+        <a href="/dashboard/premium" class="block rounded-lg bg-colorA px-4 py-3 text-sm font-medium text-primaryColorA transition duration-300 hover:bg-primaryColorA hover:text-colorB">
           <PaymentRoundedIcon className='mr-3'></PaymentRoundedIcon>Premium
         </a>
       </li>
