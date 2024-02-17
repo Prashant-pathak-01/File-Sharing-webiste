@@ -20,7 +20,6 @@ function App() {
         try {
           const res = await getHistory({ UserName: user.primaryEmailAddress.emailAddress });
           setHistory(res);
-          console.log(res);
         } catch (error) {
           console.error("Error fetching history:", error);
         }
@@ -54,7 +53,7 @@ function App() {
           {
            history.map((File) => (
               <div key={File.FileId} className='w-auto h-20 bg-primaryColorB text-blue-900 p-10 rounded-lg m-6 flex flex-row justify-between items-center'>
-                <img src={(File.Type=='image/jpeg' || File.Type=='image/png' || File.Type=='image/gif' || File.Type=='image/jpg' )?File.Url:FileSVG} className='w-16 h-16 rounded-md overflow-hidden' alt={File.Name}></img>
+                <img src={(File.Type=='image/jpeg' || File.Type=='image/png' || File.Type=='image/gif')?File.Url:FileSVG} className='w-16 h-16 rounded-md overflow-hidden' alt={File.Name}></img>
                 <div>
                   <p className='text-lg max-w-2/3 overflow-hidden'>{File.Name}</p>
                   <p className='text-sm'>{((File.Size) / 1024 / 1024).toFixed(3)} Mb</p>

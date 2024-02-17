@@ -1,5 +1,5 @@
 import axios from 'axios';
-const URL = "https://file-sharing-hnzi.onrender.com";
+const URL = "http://localhost:8000";
 export const FileData = async(data)=>{
     try{
         let res = await axios.post(`${URL}/addFile`,data);
