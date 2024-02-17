@@ -1,4 +1,4 @@
-import FileModule from './../schema/fileSchema.js';
+import FileModule from './../schema/fileSchema.js'
 
 export const fileAdder = async (req, res) => {
     try {
