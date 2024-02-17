@@ -1,0 +1,14 @@
+import express from "express";
+import database from "./Database/db.js";
+import cors from "cors";
+import Route from './routes.js';
+import bodyParser from "body-parser";
+import dotenv from 'dotenv';
+const app = express();
+dotenv.config();
+app.use(cors({origin: true, credentials: true}));
+app.use(bodyParser.json({extended:true}));
+app.use(bodyParser.urlencoded({extended:true}));
+app.use('/',Route);
+database();
+app.listen(8000,()=>{console.log("backend running")});
